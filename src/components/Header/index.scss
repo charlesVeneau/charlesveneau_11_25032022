@@ -1,0 +1,15 @@
+.header {
+    padding: 20px 20px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    &-logo {
+        height:47px;
+    }
+    &-link{
+        text-transform: uppercase;
+        margin-left: 12px;
+        white-space: nowrap;
+        font-size: 0.6em;
+    }
+}
