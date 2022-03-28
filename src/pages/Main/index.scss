@@ -1,8 +1,7 @@
+@import '../../styles/extends';
+
 .app{
     &-title{
-        font-family: "Open Sans", "Helvetica Neue", Helvetica;
-        font-size: 3em;
-        color: #ca7424;
-
+        @extend %mainColor-box
     }
 }

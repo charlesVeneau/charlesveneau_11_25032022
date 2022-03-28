@@ -1,0 +1,9 @@
+@import './variables';
+
+%mainColor-box{
+    border-radius: 10px;
+    background-color: $mainColor;
+    color: $brightColor;
+    padding: 0 20px;
+} 
+
