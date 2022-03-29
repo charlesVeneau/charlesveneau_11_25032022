@@ -1,10 +1,13 @@
-import Navbar from '../../components/Navbar'
-import './index.scss'
+import Navbar from '../../components/Navbar';
+import { Outlet } from 'react-router-dom';
+
+import './index.scss';
 
 function App() {
   return (
     <div className="App">
-<Navbar />
+      <Navbar />
+      <Outlet />
     </div>
   );
 }
