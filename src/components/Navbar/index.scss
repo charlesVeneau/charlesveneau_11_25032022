@@ -1,15 +1,35 @@
+@import '../../styles/variables.scss';
+
 .navbar {
-    padding: 20px 20px 16px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    &-logo {
-        height:47px;
+  box-sizing: content-box;
+  padding: 20px 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: $bp-desktop) {
+    max-width: 1240px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-logo {
+    height: 47px;
+    @media screen and (min-width: $bp-desktop) {
+      height: 68px;
     }
-    &-link{
-        text-transform: uppercase;
-        margin-left: 12px;
-        white-space: nowrap;
-        font-size: 0.6em;
+  }
+  &-link {
+    text-transform: uppercase;
+    + .navbar-link {
+      margin-left: 12px;
     }
+    white-space: nowrap;
+    font-size: 0.6em;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 1em;
+      + .navbar-link {
+        margin-left: 57px;
+      }
+    }
+  }
 }
