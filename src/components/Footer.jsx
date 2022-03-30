@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <img
-        src="./assets/logoFooter.svg"
+        src="/assets/logoFooter.svg"
         alt="Kaza logo"
         className="footer-logo"
       />

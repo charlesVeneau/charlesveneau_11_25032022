@@ -7,7 +7,7 @@ function Navbar() {
       <div className="navbar-block">
         <Link to="/">
           <img
-            src="./assets/logoHeader.svg"
+            src="/assets/logoHeader.svg"
             alt="Kaza logo"
             className="navbar-logo"
           />

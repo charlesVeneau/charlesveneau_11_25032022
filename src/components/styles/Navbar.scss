@@ -1,17 +1,12 @@
 @import '../../styles/variables';
+@import '../../styles/extends';
 
 .navbar {
-  box-sizing: content-box;
-  padding: 20px 20px 16px;
+  @extend %container;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (min-width: $bp-desktop) {
-    max-width: 1240px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   &-logo {
     height: 47px;
     @media screen and (min-width: $bp-desktop) {
