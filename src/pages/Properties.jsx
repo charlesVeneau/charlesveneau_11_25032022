@@ -3,11 +3,9 @@ import './styles/Properties.scss';
 
 function Properties() {
   return (
-    <div>
-      <Header>
-        <h1>Header</h1>
-      </Header>
-    </div>
+    <Header>
+      <h1 className="header-title">Chez vous, partout et ailleurs</h1>
+    </Header>
   );
 }
 

@@ -9,10 +9,16 @@
 
 %container {
   box-sizing: content-box;
-  padding: 20px 20px;
+  padding: 20px 0;
+  margin: 20px;
   @media screen and (min-width: $bp-desktop) {
-    max-width: 1240px;
+    //max-width: 1240px;
     margin-top: 20px;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+  @media screen and (min-width: $bp-bigDesktop) {
+    width: 1240px;
     margin-left: auto;
     margin-right: auto;
   }
