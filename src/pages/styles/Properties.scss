@@ -3,4 +3,21 @@
 
 .properties {
   @extend %container;
+  @media screen and(min-width: $bp-bigPhone) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: $secondaryColor;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  @media screen and(min-width: $bp-desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+    background-color: $secondaryColor;
+    border-radius: 25px;
+    padding: 50px;
+  }
 }
