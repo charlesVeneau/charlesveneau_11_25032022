@@ -1,10 +1,12 @@
+import Header from '../components/Header';
 import './styles/About.scss';
 
 function About() {
+  const isTitle = false;
   return (
-    <div>
-      <h1>About Page</h1>
-    </div>
+    <section className="about">
+      <Header isTitle={isTitle} />
+    </section>
   );
 }
 

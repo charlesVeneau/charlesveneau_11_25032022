@@ -1,13 +1,8 @@
 import './styles/Header.scss';
 
-function Header({ children }) {
+function Header({ isTitle, children }) {
   return (
-    <header
-      className="header"
-      //   style={{
-      //     backgroundImage: `${process.env.PUBLIC_URL}/assets/images/eric-muhr-P_XxsdVgtpQ-unsplash.jpeg`,
-      //   }}
-    >
+    <header className={'header ' + (!isTitle ? 'header-wide' : '')}>
       {children}
     </header>
   );
