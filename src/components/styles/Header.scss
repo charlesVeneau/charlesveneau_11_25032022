@@ -27,6 +27,11 @@
   &-wide {
     background-image: url('../../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpeg');
     height: 223px;
+    background-position-x: 50%;
+    background-position-y: 67%;
+    @media screen and (min-width: $bp-desktop) {
+      background-position-y: 42%;
+    }
   }
   &-title {
     color: $brightColor;
