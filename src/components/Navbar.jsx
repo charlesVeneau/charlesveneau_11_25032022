@@ -1,25 +1,35 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './styles/Navbar.scss';
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-block">
-        <Link to="/">
+        <NavLink to="/">
           <img
             src="/assets/logoHeader.svg"
             alt="Kaza logo"
             className="navbar-logo"
           />
-        </Link>
+        </NavLink>
       </div>
       <div className="navbar-block">
-        <Link to="/" className="navbar-link">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? 'navbar-link , navbar-link-isActive' : 'navbar-link'
+          }
+        >
           Accueil
-        </Link>
-        <Link to="/about" className="navbar-link">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? 'navbar-link , navbar-link-isActive' : 'navbar-link'
+          }
+        >
           A Propos
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
