@@ -12,7 +12,6 @@ function Properties() {
   const getApiProperties = async () => {
     const response = await fetch('data/properties.json')
       .then((response) => {
-        console.log(response);
         return response.json();
       })
       .catch((err) => {

@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+@import '../../styles/extends';
+
+.property {
+  @extend %container;
+  &-title {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  &-location {
+    margin-top: 3px;
+    font-size: 0.78em;
+  }
+  &-tags {
+    margin-top: 12px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &-info {
+    &-secondary {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-owner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-size: 0.67em;
+        width: 90px;
+        overflow-wrap: break-word;
+        text-align: right;
+      }
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 10em;
+      }
+    }
+  }
+}

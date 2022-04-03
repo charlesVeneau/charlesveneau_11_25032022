@@ -12,10 +12,18 @@
     padding: 15px 19px;
     color: $brightColor;
     position: relative;
-    //z-index: 1;
   }
-  + .card {
-    margin-top: 20px;
+  &-link {
+    display: block;
+    &:hover {
+      text-decoration: none;
+    }
+    + .card-link {
+      margin-top: 20px;
+      @media screen and(min-width: $bp-bigPhone) {
+        margin: 0;
+      }
+    }
   }
   &::before {
     content: '';
@@ -30,6 +38,5 @@
       rgba(0, 0, 0, 0.5) 100%
     );
     border-radius: 10px;
-    //z-index: 0;
   }
 }

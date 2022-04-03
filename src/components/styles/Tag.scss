@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+@import '../../styles/extends';
+
+.tag {
+  background-color: $mainColor;
+  color: $brightColor;
+  font-size: 0.56em;
+  border-radius: 5px;
+  padding: 4px 30px;
+}
