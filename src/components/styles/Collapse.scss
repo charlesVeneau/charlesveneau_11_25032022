@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/extends';
+
+.collapse {
+  margin-top: 20px;
+  &-title {
+    color: $brightColor;
+    background-color: $mainColor;
+    font-size: 0.72em;
+    padding: 8px 11px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: url('/assets/arrow.svg');
+      cursor: pointer;
+    }
+  }
+  &-text {
+    padding: 23px 12px;
+    min-height: 144px;
+    color: $mainColor;
+    font-weight: 400;
+    font-size: 00.67em;
+    background-color: $secondaryColor;
+    border-radius: 0 0 5px 5px;
+  }
+}
