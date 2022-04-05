@@ -27,11 +27,11 @@ function Properties() {
   }, []);
 
   return (
-    <div>
+    <div className="properties">
       <Header isTitle={isTitle}>
         <h1 className="header-title">Chez vous, partout et ailleurs</h1>
       </Header>
-      <section className="properties">
+      <section className="properties-content">
         {properties &&
           properties.map((property) => {
             return <Card key={property.id} property={property} />;

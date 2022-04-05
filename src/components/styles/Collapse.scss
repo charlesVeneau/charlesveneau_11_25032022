@@ -3,7 +3,12 @@
 
 .collapse {
   margin-top: 20px;
+  max-width: 1023px;
+  margin-left: auto;
+  margin-right: auto;
   &-title {
+    position: relative;
+    z-index: 1;
     color: $brightColor;
     background-color: $mainColor;
     font-size: 0.72em;
@@ -12,9 +17,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    + .collapse-content {
+      transform: translateY(-6px);
+      display: block;
+    }
+    &.isClosed {
+      &::after {
+        transform: rotate(180deg);
+      }
+      + .collapse-content {
+        display: none;
+      }
+    }
     &::after {
-      content: url('/assets/arrow.svg');
-      cursor: pointer;
+      content: '';
+      height: 10px;
+      width: 16px;
+      background-size: 16px 10px;
+      background-image: url('/assets/arrow.svg');
+      background-repeat: no-repeat;
+      @media screen and (min-width: $bp-tablet) {
+        height: 15px;
+        width: 24px;
+        background-size: 24px 15px;
+      }
+    }
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 1.33em;
+      padding: 8px 18px;
     }
   }
   &-text {
@@ -25,5 +56,9 @@
     font-size: 00.67em;
     background-color: $secondaryColor;
     border-radius: 0 0 5px 5px;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 1.33em;
+      padding: 36px 18px;
+    }
   }
 }
