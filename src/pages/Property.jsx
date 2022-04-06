@@ -1,5 +1,6 @@
 import './styles/Property.scss';
 import Tag from '../components/Tag';
+import Collapse from '../components/Collapse';
 import { useLocation } from 'react-router-dom';
 
 function Property() {
@@ -28,10 +29,27 @@ function Property() {
             </div>
             <div className="property-info-rating">{property.rating}</div>
           </div>
+          <div className="collapses">
+            <Collapse title="Description">
+              <p className="collapse-text">{property.description}</p>
+            </Collapse>
+
+            <Collapse title="Équipements">
+              <ul className="collapse-list">
+                {property.equipments.map((equipement) => (
+                  <li key={equipement}>{equipement}</li>
+                ))}
+              </ul>
+            </Collapse>
+          </div>
         </div>
       </div>
     </section>
   );
+
+  // function equipments() {
+  //   const list = document.cr
+  // }
 }
 
 export default Property;
