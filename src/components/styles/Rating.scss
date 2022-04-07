@@ -2,6 +2,9 @@
 
 .rating- {
   &star {
-    color: $mainColor;
+    width: 15px;
+    @media only screen and (min-width: $bp-desktop) {
+      width: 30px;
+    }
   }
 }

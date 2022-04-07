@@ -1,7 +1,16 @@
 @import '../../styles/variables';
 @import '../../styles/extends';
 
+.collapses {
+  @media screen and(min-width: $bp-desktop) {
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;
+  }
+}
+
 .collapse {
+  flex: 1;
   margin-top: 20px;
   max-width: 1023px;
   margin-left: auto;
@@ -37,13 +46,13 @@
       background-size: 16px 10px;
       background-image: url('/assets/arrow.svg');
       background-repeat: no-repeat;
-      @media screen and (min-width: $bp-tablet) {
+      @media screen and (min-width: $bp-desktop) {
         height: 15px;
         width: 24px;
         background-size: 24px 15px;
       }
     }
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       font-size: 1.33em;
       padding: 8px 18px;
     }
@@ -59,12 +68,24 @@
       font-weight: 400;
       font-size: 00.67em;
     }
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       padding: 36px 18px;
       .collapse-text,
       .collapse-list li {
         font-size: 1.33em;
         line-height: 1.4em;
+      }
+    }
+  }
+}
+
+.collapse-medium {
+  .collapse {
+    &-title,
+    &-text,
+    &-list li {
+      @media screen and (min-width: $bp-desktop) {
+        font-size: 1em;
       }
     }
   }

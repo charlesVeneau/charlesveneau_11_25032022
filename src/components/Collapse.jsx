@@ -1,8 +1,8 @@
 import './styles/Collapse.scss';
 
-function Collapse({ children, title }) {
+function Collapse({ children, title, medium }) {
   return (
-    <article className="collapse">
+    <article className={'collapse ' + (medium ? 'collapse-medium' : '')}>
       <div className="collapse-title isClosed" onClick={toggleCollapse}>
         {title}
       </div>

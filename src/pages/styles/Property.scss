@@ -6,10 +6,16 @@
   &-title {
     font-size: 1em;
     line-height: 1.4em;
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 2em;
+    }
   }
   &-location {
     margin-top: 3px;
     font-size: 0.78em;
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 1em;
+    }
   }
   &-tags {
     margin-top: 12px;
@@ -19,11 +25,19 @@
     gap: 10px;
   }
   &-info {
+    @media only screen and (min-width: $bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
     &-secondary {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
+      @media only screen and (min-width: $bp-desktop) {
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
     &-owner {
       display: flex;
@@ -34,11 +48,18 @@
         width: 90px;
         overflow-wrap: break-word;
         text-align: right;
+        @media only screen and (min-width: $bp-desktop) {
+          font-size: 1em;
+        }
       }
       img {
         width: 32px;
         height: 32px;
         border-radius: 10em;
+        @media only screen and (min-width: $bp-desktop) {
+          width: 64px;
+          height: 64px;
+        }
       }
     }
   }
