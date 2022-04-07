@@ -1,6 +1,7 @@
 import './styles/Property.scss';
 import Tag from '../components/Tag';
 import Collapse from '../components/Collapse';
+import Rating from '../components/Rating';
 import { useLocation } from 'react-router-dom';
 
 function Property() {
@@ -27,7 +28,9 @@ function Property() {
               </p>
               <img src={property.host.picture} alt={property.host.name} />
             </div>
-            <div className="property-info-rating">{property.rating}</div>
+            <div className="property-info-rating">
+              <Rating rating={property.rating} />
+            </div>
           </div>
           <div className="collapses">
             <Collapse title="Description">
