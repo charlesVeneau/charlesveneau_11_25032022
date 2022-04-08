@@ -7,7 +7,7 @@ function Card({ property }) {
     //   as a state element to the property page
     <Link
       to={`/properties/${property.id}`}
-      state={{ data: property }}
+      //state={{ data: property }}
       className="card-link"
     >
       <article

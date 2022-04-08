@@ -2,17 +2,40 @@ import './styles/Property.scss';
 import Tag from '../components/Tag';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function Property() {
   const location = useLocation();
-  const property = location.state?.data;
-  if(property === undefined) {
+  const [properties, setProperties] = useState();
 
+  //async function that will call the JSON file to set the properties list into state
+  const getApiProperties = async () => {
+    const response = await fetch('../data/properties.json')
+      .then((response) => {
+        return response.json();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setProperties(response);
+  };
+
+  //In order to call the API once the page is rendered, we need to use useEffect from react.
+  //We parse an Empty Array so it don't need to re run, as the API is only on read.
+  useEffect((location) => {
+    getApiProperties();
+  }, []);
+  console.log(properties);
+
+  /*   function filterProperties(id) {
+    return properties.filter((property) => property.id === id);
   }
+
+  console.log(filterProperties(location.key)); */
   return (
     <section className="property">
-      <div className="property-carroussel">This is a carroussel</div>
+      {/* <div className="property-carroussel">This is a carroussel</div>
       <div className="property-info">
         <div className="property-info-main">
           <h1 className="property-title">{property.title}</h1>
@@ -49,13 +72,9 @@ function Property() {
             ))}
           </ul>
         </Collapse>
-      </div>
+      </div> */}
     </section>
   );
-
-  // function equipments() {
-  //   const list = document.cr
-  // }
 }
 
 export default Property;

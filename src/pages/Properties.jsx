@@ -25,7 +25,6 @@ function Properties() {
   useEffect(() => {
     getApiProperties();
   }, []);
-
   return (
     <div className="properties">
       <Header isTitle={isTitle}>
