@@ -23,6 +23,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    @media only screen and (min-width: $bp-desktop) {
+      margin-bottom: 0;
+    }
   }
   &-info {
     @media only screen and (min-width: $bp-desktop) {
@@ -37,6 +40,8 @@
       @media only screen and (min-width: $bp-desktop) {
         flex-direction: column;
         align-items: flex-end;
+        justify-content: flex-end;
+        gap: 1em;
       }
     }
     &-owner {

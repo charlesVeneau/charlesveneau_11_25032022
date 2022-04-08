@@ -14,7 +14,6 @@ function Rating({ rating }) {
       notations.push(<img src={star} alt="star" className="rating-star" />);
     }
     i++;
-    console.log(notations);
   }
 
   return (

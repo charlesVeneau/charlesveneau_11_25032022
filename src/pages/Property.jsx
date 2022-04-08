@@ -7,6 +7,9 @@ import { useLocation } from 'react-router-dom';
 function Property() {
   const location = useLocation();
   const property = location.state?.data;
+  if(property === undefined) {
+
+  }
   return (
     <section className="property">
       <div className="property-carroussel">This is a carroussel</div>
