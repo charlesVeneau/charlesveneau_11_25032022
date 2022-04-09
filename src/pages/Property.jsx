@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 
 function Property() {
   const location = useParams();
-  console.log(location.propertyId);
+  //console.log(location.propertyId);
   const [properties, setProperties] = useState();
 
   const getApiProperties = async () => {

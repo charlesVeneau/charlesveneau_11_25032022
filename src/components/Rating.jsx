@@ -8,10 +8,12 @@ function Rating({ rating }) {
   while (i <= 5) {
     if (i <= rating) {
       notations.push(
-        <img src={starActive} alt="star" className="rating-star" />
+        <img src={starActive} key={i} alt="star" className="rating-star" />
       );
     } else {
-      notations.push(<img src={star} alt="star" className="rating-star" />);
+      notations.push(
+        <img src={star} key={i} alt="star" className="rating-star" />
+      );
     }
     i++;
   }
