@@ -55,6 +55,9 @@ function Carousel({ pictures }) {
           />
         </svg>
       </span>
+      <div className="carousel-slide-indicator">
+        {current + 1 + '/' + pictures.length}
+      </div>
       {pictures.map((picture, index) => {
         return (
           <div
