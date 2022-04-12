@@ -2,12 +2,13 @@ import './styles/Property.scss';
 import Tag from '../components/Tag';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
+import Carousel from '../components/Carousel';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Property() {
-  const location = useParams();
-  //console.log(location.propertyId);
+  const params = useParams();
+
   const [properties, setProperties] = useState();
 
   const getApiProperties = async () => {
@@ -23,11 +24,13 @@ function Property() {
 
   if (properties) {
     const property = properties.find(
-      (property) => property.id === location.propertyId
+      (property) => property.id === params.propertyId
     );
     return (
       <section className="property">
-        <div className="property-carroussel">This is a carroussel</div>
+        <div className="property-carroussel">
+          <Carousel pictures={property.pictures} />
+        </div>
         <div className="property-info">
           <div className="property-info-main">
             <h1 className="property-title">{property.title}</h1>
