@@ -30,18 +30,6 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    + .collapse-content {
-      transform: translateY(-6px);
-      display: block;
-    }
-    &.isClosed {
-      &::after {
-        transform: rotate(0deg);
-      }
-      + .collapse-content {
-        display: none;
-      }
-    }
     &::after {
       content: '';
       height: 10px;
@@ -57,6 +45,9 @@
         background-size: 24px 15px;
       }
     }
+    &.isClosed::after {
+      transform: rotate(0deg);
+    }
     @media screen and (min-width: $bp-desktop) {
       font-size: 1.33em;
       padding: 8px 18px;
@@ -64,10 +55,17 @@
   }
   &-content {
     padding: 23px 12px;
-    min-height: 144px;
+    height: auto;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
     color: $mainColor;
     background-color: $secondaryColor;
     border-radius: 0 0 5px 5px;
+    transform: translateY(-6px);
+    &.isCollapsed {
+      height: 0;
+      padding: 0 12px;
+    }
     .collapse-text,
     .collapse-list li {
       font-weight: 400;
@@ -75,6 +73,9 @@
     }
     @media screen and (min-width: $bp-desktop) {
       padding: 36px 18px;
+      &.isCollapsed {
+        padding: 0 18px;
+      }
       .collapse-text,
       .collapse-list li {
         font-size: 1.33em;
