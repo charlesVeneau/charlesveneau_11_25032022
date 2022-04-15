@@ -15,9 +15,6 @@ function Property() {
   const getApiProperties = async () => {
     const response = await fetch(`../data/properties.json`)
       .then((response) => response.json())
-      /*       .then((response) =>
-        response.find((property) => property.id === params.propertyId)
-      ) */
       .catch((error) => console.log(error));
     setProperties(response);
   };
