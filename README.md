@@ -1,3 +1,5 @@
+This is a React Project for the Kasa Compagny - This project is a part of my frontend dev internship
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
